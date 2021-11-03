@@ -1,3 +1,5 @@
+const net = require("net");
+
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -9,7 +11,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on('connect', () => {
-    console.log('Connected!');
+    conn.write('Name: TVN');
+    console.log('Successfully connected to game server!');
   });
 
  
@@ -22,3 +25,6 @@ const connect = function () {
   return conn;
 };
 
+connect();
+
+module.exports = connect;
