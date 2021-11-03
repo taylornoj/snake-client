@@ -14,6 +14,20 @@ const handleUserInput = function (key) {
     console.log("Terminate game: ");
     process.exit()
   }
+  if (key === "w") {
+    console.log("Move: up");
+  }
+  if (key === "a") {
+    console.log("Move: left");
+  }
+  if (key === "s") {
+    console.log("Move: down");
+  }
+  if (key === "d") {
+    console.log("Move: right");
+  }
 };
+
+
 
 module.exports = {setupInput};
