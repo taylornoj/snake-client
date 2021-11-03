@@ -1,5 +1,6 @@
 const net = require("net");
 
+
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -20,7 +21,6 @@ const connect = function () {
       conn.write("Name: TVN");
     }, 100);
   });
-
   // conn.on("connect", () => {
   //   conn.write("Move: down");
   //   setTimeout(() => {
@@ -31,9 +31,7 @@ const connect = function () {
   //   }, 50);
   //   conn.write("Move: left");
   // })
-
   return conn;
 };
 
-connect();
-module.exports = connect;
+module.exports = {connect};
