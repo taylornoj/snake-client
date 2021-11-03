@@ -11,7 +11,8 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on('connect', () => {
-    conn.write('Name: TVN');
+    conn.write('Name: TVN'),
+    conn.write('Move: up'),
     console.log('Successfully connected to game server!');
   });
 
@@ -20,11 +21,8 @@ const connect = function () {
     console.log(data);
   });
   
-
-
   return conn;
 };
 
 connect();
-
 module.exports = connect;
