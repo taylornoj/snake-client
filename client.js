@@ -20,6 +20,9 @@ const connect = function () {
     setTimeout(() => {
       conn.write("Name: TVN");
     }, 100);
+    setTimeout(() => {
+      conn.write("Say: move out the way");
+    }, 200)
   });
   // conn.on("connect", () => {
   //   conn.write("Move: down");
